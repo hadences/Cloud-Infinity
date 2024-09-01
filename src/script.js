@@ -1,14 +1,11 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import GUI from 'lil-gui'
-import gsap from 'gsap'
 
 /**
  * Texture Loader
  */
 const textureLoader = new THREE.TextureLoader()
-const matcapTexture1 = textureLoader.load('/textures/matcaps/1.png')
-const matcapTexture2 = textureLoader.load('/textures/matcaps/2.png')
 
 /**
  * Base
