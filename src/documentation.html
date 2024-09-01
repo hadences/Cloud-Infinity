@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" href="./documentation.css">
+</head>
+<body>
+    <nav id="main-navbar">
+        <ul>
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="documentation.html">Documentation</a></li>
+            <li><a class="nav-link" href="https://github.com/hadences">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <nav id="navbar">
+            <section id="user-guide">
+                <h3>User Guide</h3>
+                <ul>
+                    <li id="doc-link"><a href="#user-windows">Accessing the VM on Windows</a></li>
+                    <li id="doc-link"><a href="#user-macos">Accessing the VM on Mac OS</a></li>
+                    <li id="doc-link"><a href="#user-software">Using the software</a></li>
+                </ul>
+            </section>
+            <section id="it-guide">
+                <h3>IT Guide: Creating the VM Environment</h3>
+                <ul>
+                    <li id="doc-link"><a href="#it-vm">Creating the VM on AWS Lightsail</a></li>
+                    <li id="doc-link"><a href="#it-connect">Connecting to the VM via Remote Desktop</a></li>
+                    <li id="doc-link"><a href="#it-install">Installing Required Software</a></li>
+                    <li id="doc-link"><a href="#it-configure">Configuring VM</a></li>
+                    <li id="doc-link"><a href="#it-snapshot">Creating a Snapshot of the VM</a></li>
+                </ul>
+            </section>
+        </nav>
+        <div class="documentation">
+            <!-- User Guide -->
+            <h2>User Guide</h2>
+            <section id="user-windows">
+              <h4>Accessing Infinity's VM on Windows</h4> 
+              <p><i>In a Windows operating system, you can use the Remote Desktop Connection (RDC), which is included within the Windows operating system.</i></p>
+              <div class="info-box">
+                <ol>
+                    <li><p>Open up RDC in the Windows menu.</p></li>
+                    <li><p>Select Remote Desktop Connection.</p></li>
+                    <li><p>In the <i>'Computer'</i> text box, enter the VM's public IP Address.</p></li>
+                    <li><p>Select <i>Show Options</i> and in the <i>'User name'</i> text box, enter the user name provided by your IT department.</p></li>
+                    <li><p>Click <strong>Connect</strong>.</p></li>
+                    <li><p>After being prompted for the <i>password</i>, enter the password provided by your IT department.</p></li>
+                </ol>
+            </div>     
+            <p><i>You may get promoted with an certificate error. Press <strong>Yes</strong> and you should successfully be able to connect to the VM!</i></p>
+            </section>
+            <section id="user-macos">
+              <h4>Accessing Infinity's VM on Mac OS</h4> 
+              <p><i>In macOS, you can use the Microsoft Remote Desktop to connect to the Windows instance.</i></p>
+              <div class="info-box">
+                <ol>
+                    <li><p>Install <strong>Microsoft Remote Desktop</strong> from the App Store.</p></li>
+                    <li><p>At the top right, press the <i>+</i> sign and choose <strong>Add PC</strong></p></li>
+                    <li><p>In the <i>'PC name'</i> text box, paste the public IP address provided by your IT department.</p></li>
+                    <li><p>Click <strong>Add</strong>.</p></li>
+                    <li><p><i>Right Click</i> the instance you created and click <strong>Connect</strong>.</p></li>
+                    <li><p>Enter the Username and Password provided by your IT department and click <strong>continue</strong></p></li>
+                    <li><p>You have now successfully connected to the VM!</p></li>
+                </ol>
+            </div>     
+            </section>
+            <section id="user-software">
+              <h4>Using the software</h4>   
+              <p>Infinity's VM comes out of the box, ready for coding! The tools that it provides are: <i>VSCode, MinGW, Visual Studio Community Edition, Libre Office, and Adobe Acrobat Reader</i></p>       
+            </section>
+            <br>
+            <br>
+            <!-- IT Guide -->
+            <h2>IT Guide</h2>
+            <section id="it-vm">
+                <h4>Creating the VM on AWS Lightsail</h4>
+                <div class="info-box">
+                    <ol>
+                        <li><p>Log in to your <a class="link" href="https://aws.amazon.com/lightsail/">AWS Lightsail account</a>.</p></li>
+                        <li><p>Click on <strong>"Create Instance."</strong></p></li>
+                        <li><p>Select "Microsoft Windows" as the operating system.</p></li>
+                        <li><p>Choose a Windows version (ex., Windows Server 2022).</p></li>
+                        <li><p>Select a plan that meets the project requirements (ex., $3.50/month for basic needs).</p></li>
+                        <li><p>Name your instance and click <strong>"Create Instance."</strong></p></li>
+                        <li><p>Once the instance is created, <i>note the public IP address for future use.</i></p></li>
+                    </ol>
+                </div>
+            </section>
+            <section id="it-connect">
+                <h4>Connecting to the VM via Remote Desktop</h4>
+                <div class="info-box">
+                    <ol>
+                        <li><p>Open Remote Desktop Connection (RDC) on your local machine.</p></li>
+                        <li><p>Enter the public IP address of your Lightsail instance in the "Computer" field."</p></li>
+                        <li><p>Log in using the username and password provided during instance creation.</p></li>
+                        <li><p>Click "Connect" to establish the connection.</p></li>
+                    </ol>
+                </div>
+                <p>For more information, click <a class="link" href="#user-windows">here</a></p>
+            </section>
+            <section id="it-install">
+                <h4>Installing Required Software</h4>
+                <div class="info-box">
+                    <ul>
+                        <li>
+                            <p>Visual Studio Code (Code Editor)</p>
+                            <i class="indent">Download from <a class="link" href="https://code.visualstudio.com/">Visual Studio Code</a></i>
+                        </li>
+                        <li>
+                            <p>MinGW (Compiler)</p>
+                            <i class="indent">Download from <a class="link" href="https://www.mingw-w64.org/">MinGW</a></i>
+                        </li>
+                        <li>
+                            <p>Visual Studio Community Edition (IDE)</p>
+                            <i class="indent">Download from <a class="link" href="https://visualstudio.microsoft.com/vs/community/">Visual Studio Community Edition</a></i>
+                        </li>
+                        <li>
+                            <p>Libre Office (Document Editor)</p>
+                            <i class="indent">Download from <a class="link" href="https://www.libreoffice.org/">Libre Office</a></i>
+                        </li>
+                        <li>
+                            <p>Adobe Acrobat Reader (PDF Viewer)</p>
+                            <i class="indent">Download from <a class="link" href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a></i>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="it-configure">
+                <h4>Configuring VM</h4>
+                <div class="info-box">
+                    <ul>
+                        <li><p>Disable unnecessary services</p></li>
+                        <li><p>Set up the VM for Offline use</p></li>
+                    </ul>
+                </div>
+            </section>
+            <section id="it-snapshot">
+                <h4>Creating a Snapshot of the VM</h4>
+                <div class="info-box">
+                    <ol>
+                        <li><p>Go to the AWS Lightsail console.</p></li>
+                        <li><p>Select your instance and navigate to the "Snapshot" tab.</p></li>
+                        <li><p>Click "Create Snapshot" and wait for the process to complete.</p></li>
+                        <li><p>You are now able to use the snapshot you've created!</p></li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script type="module" src="./documentation.js"></script>
+</body>
+</html>
